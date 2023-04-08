@@ -1,0 +1,61 @@
+@use "../custom" as *;
+
+.ecosystem {
+  display: block;
+  position: relative;
+  padding: 2rem 0;
+  background-color: $gray-500;
+  background-image: url(/asset/img/img-02.jpg);
+  object-fit: fill;
+
+  .display-5 {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    margin-bottom: 3rem;
+  }
+
+  .card {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    border-radius: 2.5rem;
+    background-color: $gray-900;
+    box-shadow: 5px 3px 5px $gray-900, -3px -5px 5px $gray-800;
+
+    .img-box {
+      display: flex;
+      width: 100%;
+      justify-self: center;
+      align-self: center;
+
+      img {
+        width: 100%;
+        object-fit: fill;
+      }
+    }
+
+    .stb-card-body {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      color: $white;
+      padding: 1rem 0.5rem;
+
+      .fs-1 {
+        font-weight: 700;
+        color: $white;
+        text-transform: uppercase;
+        border-left: 8px solid $white;
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .stb-btn {
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
