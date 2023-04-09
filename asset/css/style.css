@@ -11041,6 +11041,7 @@ textarea.form-control-lg {
   display: flex;
   flex-wrap: nowrap;
   flex-grow: 1;
+  padding: 1.5rem 0.5rem;
   border-radius: 2.5rem;
   background-color: #212529;
   box-shadow: 5px 3px 5px #212529, -3px -5px 5px #343a40;
@@ -11135,6 +11136,47 @@ textarea.form-control-lg {
   font-weight: 600;
   text-decoration: none;
   margin: 0 2px;
+}
+
+.tokenomics {
+  padding: 4rem 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.tokenomics .display-5 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+.tokenomics .token-detail {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: auto;
+  padding: 0 0.5rem;
+}
+.tokenomics .token-detail .token-item {
+  color: #212529;
+  font-weight: 600;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.tokenomics .token-detail .token-item .name {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.tokenomics .token-detail .token-item:hover {
+  transition: all 0.5s;
+  border-left: 10px solid #212529;
+  padding-left: 0.5rem;
+}
+.tokenomics .btn-tab {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 1rem auto;
+  justify-content: space-evenly;
 }
 
 /*# sourceMappingURL=style.css.map */

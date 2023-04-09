@@ -3,6 +3,6 @@ PAGE MAPPING LAYOUT PLAN
 Intro Section - hero [Done]
 News Carousel - info [Done]
 Token Ecosystem - ecosystem [Done]
-Project Detail - project
+Project Detail - project [Done]
 Highlight - highlight
 Footer - footer [Done]

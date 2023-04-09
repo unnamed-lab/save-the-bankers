@@ -7,6 +7,7 @@
     <title>Save The Bankers</title>
     <link rel="stylesheet" href="./asset/css/style.css">
     <link rel="stylesheet" href="./asset/css/fontawesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="./asset/img/icon-dark.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -111,7 +112,6 @@
     </div>
 
     <div class="ecosystem">
-        <!-- <div class="bg-img-overlay"><img class="bg-img" src="./asset/img/wallpaper.jpg"></div> -->
         <div class="container">
             <div class="row">
                 <div class="display-5 text-center">The Save The Bankers Initiative.</div>
@@ -123,7 +123,7 @@
                         <div class="col-lg-8 col-md-12">
                             <div class="stb-card-body">
                                 <div class="fs-1">Save The Bankers</div>
-                                <div class="stb-btn small white"><a href="#"><i class="fa fa-chart-bar"></i> See Live Charts</a></div>
+                                <div class="stb-btn small white"><a href="#"><i class="fa-solid fa-chart-candlestick"></i> See Live Charts</a></div>
                                 <div class="text">
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione iure assumenda consequuntur nihil natus nulla provident beatae et ipsum reprehenderit. Sequi, ipsam atque error aperiam cumque ea iste! Voluptas quis perspiciatis iure rem corrupti facilis velit laboriosam placeat, non soluta, a quam sunt ab pariatur voluptatem voluptates asperiores, animi totam saepe. Voluptatibus eum ducimus doloremque dignissimos rem molestiae, corrupti illo pariatur, deserunt tempore quas labore commodi. Perspiciatis quaerat accusamus nostrum?
                                 </div>
@@ -131,6 +131,39 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tokenomics">
+        <div class="container">
+            <div class="row">
+                <div class="display-5 text-center">Tokenomics.</div>
+                <div class="col-lg-5 col-md-12">
+                    <div class="token-detail">
+                        <canvas id="myChart"></canvas>
+                        <div class="token-item mt-3 text-center">Token Distribution</div>
+                    </div>
+
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <div class="container">
+                        <div class="token-detail">
+                            <div class="token-item"><div class="name">Name: Save The Bankers</div></div>
+                            <div class="token-item">Ticker: STB</div>
+                            <div class="token-item">Network: BSC</div>
+                            <div class="token-item">Total Supply: 10,000,000,000</div>
+                            <div class="token-item">Transaction Fees: 5%</div>
+                            <div class="token-item"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="btn-tab">
+                    <div class="stb-btn big round"><a href="#">Buy on Pancakeswap</a></div>
+                    <div class="stb-btn big round"><a href="#">Dextools Chart</a></div>
                 </div>
             </div>
         </div>
@@ -148,9 +181,9 @@
                 <div class="col-lg-3 col-md-12">
                     <div class="footer-item">
                         <div class="fs-5">Social Platforms</div>
-                        <div class="footer-link"><a href=""><i class="fab fa-twitter"></i> Twitter</a></div>
-                        <div class="footer-link"><a href=""><i class="fab fa-telegram"></i> Telegram</a></div>
-                        <div class="footer-link"><a href=""><i class="fab fa-discord"></i> Discord</a></div>
+                        <div class="footer-link"><a href=""><i class="fa-brands fa-twitter"></i> Twitter</a></div>
+                        <div class="footer-link"><i class="fa-brands fa-telegram"></i> Telegram</a></div>
+                        <div class="footer-link"><a href=""><i class="fa-brands fa-discord"></i> Discord</a></div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-12">
@@ -171,5 +204,38 @@
     </footer>
 
     <script src="./assets/js/bootstrap.js"></script>
+    <script src="./asset/js/chart/dist/chart.umd.js"></script>
+    
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Team',
+                    'Marketing',
+                    'Burn Reserve',
+                    'Public'
+                ],
+                datasets: [{
+                    label: 'Distribution',
+                    data: [10, 10, 10, 70],
+                    backgroundColor: [
+                        '#1b6988',
+                        '#20789b',
+                        '#2a95bf',
+                        '#295fa6',
+                    ],
+                    hoverOffset: 50,
+                    hoverBorderColor: '#dddddd',
+                    borderWidth: 3,
+                    offset: 10,
+                    borderJoinStyle: 'round',
+                    rotation: 15
+                }]
+            },
+        });
+    </script>
 </body>
 </html>
