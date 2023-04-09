@@ -11075,4 +11075,66 @@ textarea.form-control-lg {
   margin-bottom: 1.5rem;
 }
 
+.footer {
+  position: relative;
+  padding: 3rem 0;
+  background-color: rgba(0, 0, 0, 0.8901960784);
+  color: #fff;
+}
+.footer-item {
+  display: flex;
+  flex-direction: column;
+}
+.footer-item .title {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.footer-item .title .logo {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+.footer-item .title .brand-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-right: 0.25rem;
+}
+.footer-item .description {
+  font-weight: 300;
+  font-size: 15px;
+  text-decoration: none;
+}
+.footer-item .fs-5 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.footer-link {
+  display: flexbox;
+  flex-wrap: nowrap;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #fff;
+  margin: 0.15rem 0;
+}
+.footer-link a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+.footer-link a:hover {
+  color: #2a95bf;
+  transition: all 0.5s;
+}
+.footer-link span#dateyear {
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 2px;
+}
+
 /*# sourceMappingURL=style.css.map */

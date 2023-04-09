@@ -5,4 +5,4 @@ News Carousel - info [Done]
 Token Ecosystem - ecosystem [Done]
 Project Detail - project
 Highlight - highlight
-Footer - footer
+Footer - footer [Done]
