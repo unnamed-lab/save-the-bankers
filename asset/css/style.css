@@ -10940,12 +10940,12 @@ textarea.form-control-lg {
 }
 @media (max-width: 991.98px) {
   .hero-header .navbar-brand .brand-title {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
   }
 }
 @media (max-width: 575.98px) {
   .hero-header .navbar-brand .brand-title {
-    font-size: 1rem;
+    font-size: 1.35rem;
   }
 }
 .hero-header .nav-link {
@@ -11097,11 +11097,12 @@ textarea.form-control-lg {
 }
 @media (max-width: 767.98px) {
   .info .card .carousel-item .stb-card-body .text {
-    font-size: 14px;
+    font-size: 13px;
+    margin-bottom: 1rem;
   }
 }
 .info .card .carousel-item .stb-card-body .card-bottom {
-  position: sticky;
+  position: relative;
   margin-bottom: 1.5rem;
 }
 @media (max-width: 767.98px) {
