@@ -1,49 +1,66 @@
 @use "../custom" as *;
 
 .tokenomics {
-    padding: 4rem 0;
+  padding: 4rem 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  .display-5 {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+
+  .token-detail {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+    padding: 0 0.5rem;
+
+    .token-item {
+      color: $dark;
+      font-weight: 600;
+      font-size: 1.75rem;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      @include media-breakpoint-down(md) {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .name {
+        font-size: 2rem;
+        font-weight: 700;
+
+        @include media-breakpoint-down(md) {
+          font-size: 1.5rem;
+        }
+      }
+
+      &:hover {
+        transition: all 0.5s;
+        border-left: 10px solid $dark;
+        padding-left: 0.5rem;
+      }
+    }
+  }
+
+  .btn-tab {
     display: flex;
     flex-wrap: nowrap;
-    align-items: center;
+    margin: 1rem auto;
+    justify-content: space-evenly;
 
-    .display-5 {
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-bottom: 3rem;
+    @include media-breakpoint-down(md) {
+      display: flex;
+      flex-wrap: wrap;
     }
 
-    .token-detail {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        margin: auto;
-        padding: 0 .5rem;
-
-        .token-item {
-            color: $dark;
-            font-weight: 600;
-            font-size: 1.75rem;
-            text-transform: uppercase;
-            margin-bottom: 2rem;
-
-            .name {
-                font-size: 2rem;
-                font-weight: 700;
-
-            }
-
-            &:hover {
-                transition: all 0.5s;
-                border-left: 10px solid $dark;
-                padding-left: .5rem;
-            }
-        }
+    .stb-btn {
+        margin-bottom: 1.5rem;
     }
-
-    .btn-tab {
-        display: flex;
-        flex-wrap: nowrap;
-        margin: 1rem auto;
-        justify-content: space-evenly;
-    }
+  }
 }

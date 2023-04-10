@@ -3,9 +3,12 @@
 .footer {
     position: relative;
     padding: 3rem 0;
-    // background-color: linear-gradient(180deg, $dark, $black);
     background-color: #000000e3;
     color: $white;
+
+    @include media-breakpoint-down(md) {
+        padding: 3rem 1.5rem;
+    }
 
     &-item {
         display: flex;
@@ -20,7 +23,7 @@
             .logo {
                 width: 3rem;
                 height: 3rem;
-                margin-right: 1rem;
+                margin-right: .25rem;
             }
 
             .brand-title {
@@ -41,6 +44,11 @@
             font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 1rem;
+
+            @include media-breakpoint-down(md) {
+                margin-top: 1rem;
+                margin-bottom: 0.15rem;
+            }
         }
 
     }

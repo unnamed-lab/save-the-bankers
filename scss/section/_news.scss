@@ -1,64 +1,91 @@
 @use "../custom" as *;
 
 .info {
-    position: relative;
+  position: relative;
+  display: block;
+  padding: 4rem 0;
+  z-index: 1;
+
+  @include media-breakpoint-down(md) {
+    padding: 4rem 1rem;
+  }
+
+  .card {
     display: block;
-    padding: 4rem 0;
-    z-index: 1;
+    border-radius: 2rem;
+    padding: 0;
 
-    .card {
-        display: block;
-        border-radius: 2rem;
-        padding: 0;
+    .carousel-item {
+      display: flex;
+      flex-wrap: nowrap;
 
-        .carousel-item {
-            display: flex;
-            flex-wrap: nowrap;
+      .stb-card-date {
+        flex: 0 0 auto;
+        align-self: center;
+        border-bottom-left-radius: 2rem;
+        border-top-left-radius: 2rem;
+        transform: rotateZ(270deg);
 
-            .stb-card-date {
-                flex: 0 0 auto;
-                align-self: center;
-                border-bottom-left-radius: 2rem;
-                border-top-left-radius: 2rem;
-                transform: rotateZ(270deg);
+        .stb-card-item {
+          width: 100%;
 
-                .stb-card-item {
-                    width: 100%;
-                    
-                    span {
-                        width: 100%;
-                        font-size: 14px;
-                        color: $dark;
-                        font-weight: 500;
-                        padding-bottom: 5px;
-                        border-bottom: 1px solid #ccc;
-                    }
-                }
-            }
-
-            .stb-card-body {
-                display: flex;
-                flex-wrap: nowrap;
-                min-height: 20rem;
-                max-height: 25rem;
-
-                .fs-1 {
-                    font-weight: 600;
-                    margin-top: 0.5rem;
-                    margin-bottom: 0.25rem;
-                }
-
-                .text {
-                    font-weight: 400;
-                    margin-bottom: 2rem;
-                }
-
-                .card-bottom {
-                    position: absolute;
-                    height: 100%;
-                    top: 85%;
-                }
-            }
+          span {
+            width: 100%;
+            font-size: 14px;
+            color: $dark;
+            font-weight: 500;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ccc;
+          }
         }
+      }
+
+      .stb-card-body {
+        display: flex;
+        flex-wrap: nowrap;
+        min-height: 20rem;
+        max-height: 25rem;
+
+        @include media-breakpoint-down(lg) {
+          min-height: 15rem;
+          max-height: 18rem;
+        }
+
+        .card-img {
+          @include media-breakpoint-down(md) {
+            display: none;
+          }
+        }
+
+        .fs-1 {
+          font-weight: 600;
+          margin-top: 0.5rem;
+          margin-bottom: 0.25rem;
+
+          @include media-breakpoint-down(lg) {
+            font-size: 21px !important;
+            font-weight: 700;
+          }
+        }
+
+        .text {
+          font-weight: 400;
+          margin-bottom: 2rem;
+
+          @include media-breakpoint-down(md) {
+            font-size: 14px;
+          }
+        }
+
+        .card-bottom {
+          position: sticky;
+          margin-bottom: 1.5rem;
+
+          @include media-breakpoint-down(md) {
+            margin-bottom: 1.75rem;
+          }
+        }
+      }
     }
+  }
 }

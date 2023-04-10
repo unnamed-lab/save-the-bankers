@@ -4,9 +4,13 @@
   display: block;
   position: relative;
   padding: 2rem 0;
-  background-color: $gray-500;
-  background-image: url(/asset/img/img-02.jpg);
+  background-color: $black;
+  // background-image: url(/asset/img/img-02.jpg);
   object-fit: fill;
+
+  @include media-breakpoint-down(md) {
+    padding: 2rem 1.25rem;
+  }
 
   .display-5 {
     font-weight: 700;
@@ -20,7 +24,7 @@
     display: flex;
     flex-wrap: nowrap;
     flex-grow: 1;
-    padding: 1.5rem .5rem;
+    padding: 1.5rem 0.5rem;
     border-radius: 2.5rem;
     background-color: $gray-900;
     box-shadow: 5px 3px 5px $gray-900, -3px -5px 5px $gray-800;
@@ -30,6 +34,13 @@
       width: 100%;
       justify-self: center;
       align-self: center;
+
+      @include media-breakpoint-down(md) {
+        width: 80%;
+        margin-bottom: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
       img {
         width: 100%;
