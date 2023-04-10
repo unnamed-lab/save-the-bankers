@@ -78,7 +78,7 @@
         }
 
         .card-bottom {
-          position: sticky;
+          position:relative;
           margin-bottom: 1.5rem;
 
           @include media-breakpoint-down(md) {
