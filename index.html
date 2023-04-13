@@ -43,16 +43,16 @@
         </header>
         <div class="hero-bg"><img class="bg-img" src="./asset/img/wallpaper.jpg"></div>
         <div class="intro">
-            <h1>Hello World!</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, a.</p>
-            <div class="stb-btn big light mx-auto"><a href="#">Swap!</a></div>
+            <h1 class="intro-title">Hello World!</h1>
+            <p class="intro-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, a.</p>
+            <div class="stb-btn big light mx-auto intro-btn"><a href="#">Swap!</a></div>
         </div>
     </div>
 
     <div class="info">
         <div class="container">
             <div class="row">
-                <div class="card">
+                <div class="card info-card">
                     <div class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="stb-card-body">
                                     <div class="col-lg-7 col-md-12">
-                                        <div class="bg-img card-img"><img src="./asset/img/carousel.jpg" alt=""></div>
+                                        <div class="bg-img"><img src="./asset/img/carousel.jpg" alt=""></div>
                                     </div>
                                     <div class="col-lg-5 col-md-12">
                                         <div class="container">
@@ -117,14 +117,14 @@
     <div class="ecosystem" id="about-us">
         <div class="container">
             <div class="row">
-                <div class="display-5 text-center">The Save The Bankers Initiative.</div>
-                <div class="card">
+                <div class="display-5 about-title text-center">The Save The Bankers Initiative.</div>
+                <div class="card about-card">
                     <div class="row">
                         <div class="col-lg-4 col-md-12">
-                            <div class="img-box"><img src="./asset/img/img-01.png" alt=""></div>
+                            <div class="img-box"><img class="card-img" src="./asset/img/img-01.png" alt=""></div>
                         </div>
                         <div class="col-lg-8 col-md-12">
-                            <div class="stb-card-body">
+                            <div class="stb-card-body card-detail-text">
                                 <div class="fs-1">Save The Bankers</div>
                                 <div class="stb-btn small white"><a href="#"><i class="fa-solid fa-chart-candlestick"></i> See Live Charts</a></div>
                                 <div class="text">
@@ -142,7 +142,7 @@
     <div class="tokenomics">
         <div class="container">
             <div class="row">
-                <div class="display-5 text-center">Tokenomics.</div>
+                <div class="display-5 text-center tokenomics-title">Tokenomics.</div>
                 <div class="col-lg-5 col-md-12">
                     <div class="token-detail">
                         <canvas id="myChart"></canvas>
@@ -152,13 +152,12 @@
                 </div>
                 <div class="col-lg-7 col-md-12">
                     <div class="container">
-                        <div class="token-detail">
+                        <div class="token-detail tkd">
                             <div class="token-item"><div class="name">Name: Save The Bankers</div></div>
                             <div class="token-item">Ticker: STB</div>
                             <div class="token-item">Network: BSC</div>
                             <div class="token-item">Total Supply: 10,000,000,000</div>
                             <div class="token-item">Transaction Fees: 5%</div>
-                            <div class="token-item"></div>
                         </div>
                     </div>
                 </div>
@@ -200,7 +199,7 @@
             </div>
             <div class="row">
                 <p class="footer-link text-center mt-5">
-                    © Copyright <span id="dateyear">2023</span> <a href="#" class="footer-link">Save The Bankers</a>
+                    © Copyright <span id="dateyear"></span> <a href="#" class="footer-link">Save The Bankers</a>
                 </p>
             </div>
         </div>
@@ -208,39 +207,9 @@
 
     <script src="./asset/js/bootstrap.js"></script>
     <script src="./asset/js/chart/dist/chart.umd.js"></script>
-    
-    <script>
-        const ctx = document.getElementById('myChart');
+    <script src="./asset/js/gsap/gsap.js"></script>
+    <script src="./asset/js/main.js" ></script>
 
-        new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: [
-                    'Team',
-                    'Marketing',
-                    'Liquidity',
-                    'Burn Reserve',
-                    'Public'
-                ],
-                datasets: [{
-                    label: 'Distribution',
-                    data: [10, 15, 10, 5, 60],
-                    backgroundColor: [
-                        '#295fa6',
-                        '#20d89b',
-                        '#2ad56f',
-                        '#2a9545',
-                        '#2a95bf',
-                    ],
-                    hoverOffset: 50,
-                    hoverBorderColor: '#dddddd',
-                    borderWidth: 3,
-                    offset: 10,
-                    borderJoinStyle: 'round',
-                    rotation: 15
-                }]
-            },
-        });
-    </script>
+    
 </body>
 </html>
