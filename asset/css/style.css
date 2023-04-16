@@ -10872,7 +10872,10 @@ textarea.form-control-lg {
 }
 
 .bg-img {
+  display: flex;
+  align-items: center;
   width: 100%;
+  height: 100%;
 }
 .bg-img img {
   object-fit: fill;

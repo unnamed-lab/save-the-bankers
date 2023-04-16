@@ -37,21 +37,9 @@ tl.from(".hero-header", {
     ">"
   );
 
-
-tl.from(".info-card", {
-  scrollTrigger: {
-    trigger: ".info-card",
-    start: "bottom center",
-    toggleActions: "play none reverse none",
-  },
-  x: 200,
-  delay: 0.5,
-  duration: 1.3,
-});
-
-tl.from(".about-title", {
+  tl.from(".about-title", {
   y: -30,
-  delay: 0.5,
+  delay: 0.1,
   duration: 1.15,
   scrollTrigger: {
     trigger: ".ecosystem",
@@ -76,13 +64,26 @@ tl.from(".about-title", {
     x: -20,
 }, "-=.1");
 
+
+tl.from(".info-card", {
+  scrollTrigger: {
+    trigger: ".info-card",
+    start: "bottom center",
+    toggleActions: "play none reverse none",
+  },
+  x: 50,
+  delay: 0.5,
+  duration: 1.3,
+});
+
+
 tl.from(".tokenomics", {
   scrollTrigger: {
     trigger: ".tokenomics",
     start: "bottom center",
     toggleActions: "play none reverse none",
   },
-  x: 200,
+  x: 50,
   delay: 0.5,
   duration: 1.3,
 })
@@ -101,12 +102,12 @@ tl.from(".tokenomics", {
     ">"
   )
   .from(".token-detail", {
-    y: -70,
+    y: -50,
   })
   .from(
     "#myChart",
     {
-      y: -70,
+      y: -50,
     },
     "-=1"
   )
